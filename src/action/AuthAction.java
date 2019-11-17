@@ -1,6 +1,3 @@
-/**
- * 認証クラス
- */
 package action;
 
 import com.opensymphony.xwork2.Action;
@@ -15,10 +12,9 @@ import org.apache.logging.log4j.Logger;
  */
 public class AuthAction implements Action {
 
-
     private Logger logger = LogManager.getLogger(AuthAction.class);
-    private String userid="";
-    private String password="";
+    private String userid = "";
+    private String password = "";
 
     @Override
     public String execute() throws Exception {

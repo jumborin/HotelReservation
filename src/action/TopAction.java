@@ -1,11 +1,10 @@
-/**
- * 認証クラス
- */
 package action;
 
 import com.opensymphony.xwork2.Action;
 
 /**
+ * 本アプリケーションにアクセスする
+ *
  * @author jumborin
  *
  */
