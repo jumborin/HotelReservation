@@ -12,7 +12,7 @@
 		</action>
 		<action name="AuthAction" class="action.AuthAction"
 			method="execute">
-			<result name="found">/Top.jsp</result>
+			<result name="found">/MyPage.jsp</result>
 			<result name="error">/error.jsp</result>
 		</action>
 	</package>
