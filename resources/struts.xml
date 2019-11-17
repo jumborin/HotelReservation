@@ -15,6 +15,13 @@
 			<result name="found">/MyPage.jsp</result>
 			<result name="error">/error.jsp</result>
 		</action>
+		<action name="MyPageAction" class="action.MyPageAction"
+			method="execute">
+			<result name="add">/Reserve.jsp</result>
+			<result name="cancel">/ReserveResult.jsp</result>
+			<result name="delete">/ReserveResult.jsp</result>
+		</action>
+
 	</package>
 	<constant name="struts.action.extension" value="" />
 </struts>
