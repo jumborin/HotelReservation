@@ -20,7 +20,8 @@ public class AuthAction implements Action {
     public String execute() throws Exception {
 	// TODO 自動生成されたメソッド・スタブ
 	logger.info("入力されたパラメータは「{}」です。", userid);
-	return "found";
+	//return "found";
+	return "error";
     }
 
     /**
