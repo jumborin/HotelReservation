@@ -12,7 +12,7 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 	crossorigin="anonymous">
-<title>トップ画面</title>
+<title>マイページ画面</title>
 </head>
 <body>
 
@@ -29,8 +29,32 @@
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 		crossorigin="anonymous"></script>
 
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">ホテル予約システム</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a class="nav-link disabled"
+					href="#"> 予約 </a></li>
+				<li class="nav-item"><a class="nav-link disabled" href="#">客室紹介</a></li>
+				<li class="nav-item"><a class="nav-link disabled" href="#"
+					aria-disabled="true">マイページ</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="alert alert-info" role="alert">
+		<s:property value="userid" />
+		さんの予約状況は下記の通りです。
+	</div>
+
 	<s:form action="login">
-		<s:property value="userid" />でログインしました。
-　　　</s:form>
+
+	</s:form>
 </body>
 </html>
