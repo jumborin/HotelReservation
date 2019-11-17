@@ -40,9 +40,9 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item"><a class="nav-link disabled"
-					href="#">予約 </a></li>
+				    href="#">予約 </a></li>
 				<li class="nav-item"><a class="nav-link disabled" href="#">客室紹介</a></li>
-				<li class="nav-item active"><a class="nav-link disabled" href="#"
+				<li class="nav-item active"><a class="nav-link disabled" href="#" 
 					aria-disabled="true">マイページ</a></li>
 			</ul>
 		</div>
@@ -53,7 +53,7 @@
 		さんの予約状況は下記の通りです。
 	</div>
 
-	<s:form action="login">
+	<s:form action="MyPageAction">
 		<table class="table">
 			<thead>
 				<tr>
@@ -77,6 +77,9 @@
 				</tr>
 			</tbody>
 		</table>
+		<div>
+			<s:submit class="btn btn-success" value="追加" />
+		</div>
 	</s:form>
 </body>
 </html>
