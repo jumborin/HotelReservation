@@ -32,7 +32,7 @@
 		crossorigin="anonymous"></script>
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="#">Navbar</a>
+		<a class="navbar-brand" href="#">ホテル予約システム</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -42,13 +42,14 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active"><a class="nav-link disabled"
-					href="#"> Link0 </a></li>
-				<li class="nav-item"><a class="nav-link disabled" href="#">Link1</a></li>
+					href="#"> 予約 </a></li>
+				<li class="nav-item"><a class="nav-link disabled" href="#">客室紹介</a></li>
 				<li class="nav-item"><a class="nav-link disabled" href="#"
-					aria-disabled="true">Link2</a></li>
+					aria-disabled="true">マイページ</a></li>
 			</ul>
 		</div>
 	</nav>
+
 	<s:form action="AuthAction">
 		<div class="form-group">
 			<label for="uid">ユーザID：</label> <input type="text" id="uid"
