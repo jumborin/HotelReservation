@@ -3,9 +3,6 @@
  */
 package dao;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import entity.User;
 
 /**
@@ -21,6 +18,7 @@ public class UserDao {
      * @return
      */
     public User select(User user) {
+	user.setUserName("田中太郎");
 	return user;
     }
 

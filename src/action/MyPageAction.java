@@ -21,7 +21,7 @@ public class MyPageAction implements Action {
     private Logger logger = LogManager.getLogger(MyPageAction.class);
     @Getter
     @Setter
-    private String userid = "";
+    private String userId = "";
 
     @Getter
     @Setter
@@ -29,7 +29,7 @@ public class MyPageAction implements Action {
 
     @Override
     public String execute() throws Exception {
-	logger.info("入力されたパラメータは「{}」です。", userid);
+	logger.info("入力されたパラメータは「{}」です。", userId);
 	return "add";
     }
 }

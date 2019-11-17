@@ -20,7 +20,7 @@ public class ReserveAction implements Action {
 
     @Getter
     @Setter
-    private String userid = "";
+    private String userId = "";
     @Getter
     @Setter
     private String startDate = "";

@@ -21,7 +21,7 @@ public class AuthAction implements Action {
     private Logger logger = LogManager.getLogger(AuthAction.class);
     @Getter
     @Setter
-    private String userid = "";
+    private String userId = "";
     @Getter
     @Setter
     private String password = "";
@@ -30,14 +30,14 @@ public class AuthAction implements Action {
     public String execute() throws Exception {
 	UserDao userDao = new UserDao();
 	User user = new User();
-	user.setUserId(userid);
+	user.setUserId(userId);
 	user.setPassword(password);
 	user = userDao.select(user);
 	if (user.getUserName().equals("")) {
-	    logger.error("「{}」がログインできませんでした。", userid);
+	    logger.error("「{}」がログインできませんでした。", userId);
 	    return "error";
 	} else {
-	    logger.info("「{}」がログインしました。", userid);
+	    logger.info("「{}」がログインしました。", userId);
 	    return "found";
 	}
     }
