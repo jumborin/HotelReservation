@@ -21,6 +21,10 @@
 			<result name="cancel">/ReserveResult.jsp</result>
 			<result name="delete">/ReserveResult.jsp</result>
 		</action>
+		<action name="ReserveAction" class="action.ReserveAction"
+			method="execute">
+			<result name="complete">/MyPage.jsp</result>
+		</action>
 
 	</package>
 	<constant name="struts.action.extension" value="" />
