@@ -2,6 +2,7 @@ package action;
 
 import com.opensymphony.xwork2.Action;
 
+import dao.ReserveDao;
 import lombok.Getter;
 import lombok.Setter;
 import org.apache.logging.log4j.LogManager;
@@ -16,6 +17,7 @@ import org.apache.logging.log4j.Logger;
 public class ReserveAction implements Action {
 
     private Logger logger = LogManager.getLogger(ReserveAction.class);
+
     @Getter
     @Setter
     private String userid = "";
@@ -34,7 +36,13 @@ public class ReserveAction implements Action {
 
     @Override
     public String execute() throws Exception {
-	logger.info("「{}」プランで予約されました。", plan);
+	ReserveDao reserveDao = new ReserveDao();
+	boolean resultFlag = reserveDao.insert();
+	if (resultFlag) {
+	    logger.info("「{}」プランで予約されました。", plan);
+	} else {
+	    logger.info("「{}」プランは予約できませんでした。", plan);
+	}
 	return "complete";
     }
 }
