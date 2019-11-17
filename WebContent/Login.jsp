@@ -31,20 +31,36 @@
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 		crossorigin="anonymous"></script>
 
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">Navbar</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a class="nav-link disabled"
+					href="#"> Link0 </a></li>
+				<li class="nav-item"><a class="nav-link disabled" href="#">Link1</a></li>
+				<li class="nav-item"><a class="nav-link disabled" href="#"
+					aria-disabled="true">Link2</a></li>
+			</ul>
+		</div>
+	</nav>
 	<s:form action="AuthAction">
-		<table>
-			<tr>
-				<th>ユーザID：</th>
-				<td><s:textfield name="userid" /></td>
-			</tr>
-			<tr>
-				<th>パスワード：</th>
-				<td><s:textfield name="password" /></td>
-			</tr>
-			<tr>
-				<td colspan="2"><s:submit value="ログイン" /></td>
-			</tr>
-		</table>
+		<div class="form-group">
+			<label for="uid">ユーザID：</label> <input type="text" id="uid"
+				name="userid" class="form-control" placeholder="ユーザID" />
+		</div>
+		<div class="form-group">
+			<label for="pass">パスワード：</label> <input type="password" id="pass"
+				name="password" class="form-control" placeholder="パスワード" />
+		</div>
+		<div class="form-group">
+			<s:submit value="ログイン" class="btn btn-success" />
+		</div>
 	</s:form>
 </body>
 </html>
