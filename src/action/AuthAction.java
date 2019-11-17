@@ -2,6 +2,8 @@ package action;
 
 import com.opensymphony.xwork2.Action;
 
+import dao.UserDao;
+import entity.User;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -26,9 +28,17 @@ public class AuthAction implements Action {
 
     @Override
     public String execute() throws Exception {
-	// TODO 自動生成されたメソッド・スタブ
-	logger.info("「{}」がログインしました。", userid);
-	return "found";
-	// return "error";
+	UserDao userDao = new UserDao();
+	User user = new User();
+	user.setUserId(userid);
+	user.setPassword(password);
+	user = userDao.select(user);
+	if (user.getUserName().equals("")) {
+	    logger.error("「{}」がログインできませんでした。", userid);
+	    return "error";
+	} else {
+	    logger.info("「{}」がログインしました。", userid);
+	    return "found";
+	}
     }
 }

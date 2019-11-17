@@ -20,9 +20,8 @@ public class UserDao {
      *
      * @return
      */
-    public List<User> select() {
-	List<User> list = new ArrayList<User>();
-	return list;
+    public User select(User user) {
+	return user;
     }
 
     /**
