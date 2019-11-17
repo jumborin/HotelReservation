@@ -32,7 +32,13 @@
 		crossorigin="anonymous"></script>
 
 	<div class="alert alert-danger" role="alert">
-		<s:property value="id" />は見つかりませんでした。
+		<s:property value="userid" />
+		は見つかりませんでした。
 	</div>
+	<s:form action="TopAction">
+		<div>
+			<s:submit value="戻る" class="btn btn-warning" />
+		</div>
+	</s:form>
 </body>
 </html>
