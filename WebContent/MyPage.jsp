@@ -54,7 +54,27 @@
 	</div>
 
 	<s:form action="login">
-
+		<table class="table">
+			<thead>
+				<tr>
+					<th>日付(宿泊開始日)</th>
+					<th>日付(宿泊終了日)</th>
+					<th>人数</th>
+					<th>プラン名</th>
+					<th>修正・キャンセル</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>2019/11/11</td>
+					<td>2019/11/23</td>
+					<td>2名</td>
+					<td>素泊まりプラン</td>
+					<td><button class="btn btn-primary">修正</button>
+						<button class="btn btn-danger">キャンセル</button></td>
+				</tr>
+			</tbody>
+		</table>
 	</s:form>
 </body>
 </html>
