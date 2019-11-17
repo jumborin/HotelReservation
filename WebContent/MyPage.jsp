@@ -39,10 +39,10 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link disabled"
-					href="#"> 予約 </a></li>
+				<li class="nav-item"><a class="nav-link disabled"
+					href="#">予約 </a></li>
 				<li class="nav-item"><a class="nav-link disabled" href="#">客室紹介</a></li>
-				<li class="nav-item"><a class="nav-link disabled" href="#"
+				<li class="nav-item active"><a class="nav-link disabled" href="#"
 					aria-disabled="true">マイページ</a></li>
 			</ul>
 		</div>
@@ -70,8 +70,10 @@
 					<td>2019/11/23</td>
 					<td>2名</td>
 					<td>素泊まりプラン</td>
-					<td><button class="btn btn-primary">修正</button>
-						<button class="btn btn-danger">キャンセル</button></td>
+					<td>
+						<button class="btn btn-primary">修正</button>
+						<button class="btn btn-danger">キャンセル</button>
+					</td>
 				</tr>
 			</tbody>
 		</table>
