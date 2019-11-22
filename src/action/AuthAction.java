@@ -7,8 +7,11 @@ import entity.User;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Map;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.struts2.interceptor.SessionAware;
 
 /**
  * ログインログアウト認証を行うアクションクラス
@@ -16,12 +19,25 @@ import org.apache.logging.log4j.Logger;
  * @author jumborin
  *
  */
-public class AuthAction implements Action {
+public class AuthAction implements Action, SessionAware {
 
     private Logger logger = LogManager.getLogger(AuthAction.class);
+    private Map<String, Object> session;
+
+    /**
+     * セッション取り出し処理
+     */
+    @Override
+    public void setSession(Map<String, Object> session) {
+	this.session = session;
+    }
+
     @Getter
     @Setter
     private String userId = "";
+    @Getter
+    @Setter
+    private String userName = "";
     @Getter
     @Setter
     private String password = "";
@@ -39,6 +55,7 @@ public class AuthAction implements Action {
 
 	// ロジック処理
 	UserDao userDao = new UserDao();
+	session.put("user", user);
 	user = userDao.select(user);
 
 	// 結果処理
@@ -47,6 +64,8 @@ public class AuthAction implements Action {
 	    return "error";
 	} else {
 	    logger.info("「{}」がログインしました。", userId);
+	    session.put("user", user);
+	    userName = user.getUserName();
 	    return "found";
 	}
     }

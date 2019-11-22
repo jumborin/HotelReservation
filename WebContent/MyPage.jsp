@@ -49,7 +49,7 @@
 	</nav>
 
 	<div class="alert alert-info" role="alert">
-		<s:property value="userId" />
+		<s:property value="userName" />
 		さんの予約状況は下記の通りです。
 	</div>
 
