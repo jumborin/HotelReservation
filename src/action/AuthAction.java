@@ -26,13 +26,22 @@ public class AuthAction implements Action {
     @Setter
     private String password = "";
 
+    /**
+     * ロジック処理
+     */
     @Override
     public String execute() throws Exception {
-	UserDao userDao = new UserDao();
+
+	// Entityに画面項目をセット
 	User user = new User();
-	user.setUserId(userId);
-	user.setPassword(password);
+	user.setUserId(this.userId);
+	user.setPassword(this.password);
+
+	// ロジック処理
+	UserDao userDao = new UserDao();
 	user = userDao.select(user);
+
+	// 結果処理
 	if (user.getUserName().equals("")) {
 	    logger.error("「{}」がログインできませんでした。", userId);
 	    return "error";
