@@ -14,6 +14,9 @@ import lombok.Setter;
 public class Reserve {
     @Getter
     @Setter
+    private String reserveId = "";
+    @Getter
+    @Setter
     private Date startDate = new Date();
     @Getter
     @Setter
