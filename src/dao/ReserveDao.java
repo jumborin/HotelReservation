@@ -9,15 +9,15 @@ import entity.Reserve;
  * 予約DAO
  *
  * @author jumborin
- *
  */
 public class ReserveDao {
     /**
      * 予約を取得する
      *
-     * @return
+     * @return 予約リスト
      */
     public List<Reserve> select() {
+	// TODO
 	List<Reserve> list = new ArrayList<Reserve>();
 	return list;
     }
@@ -25,27 +25,30 @@ public class ReserveDao {
     /**
      * 予約を登録する
      *
-     * @return
+     * @return 登録結果(true:成功、false:失敗)
      */
-    public boolean insert() {
+    public boolean insert(final Reserve reserve) {
+	// TODO
 	return true;
     }
 
     /**
      * 予約を更新する
      *
-     * @return
+     * @return 更新結果(true:成功、false:失敗)
      */
-    public boolean update() {
+    public boolean update(final Reserve reserve) {
+	// TODO
 	return true;
     }
 
     /**
      * 予約を削除する
      *
-     * @return
+     * @return 削除結果(true:成功、false:失敗)
      */
-    public boolean delete() {
+    public boolean delete(final Reserve reserve) {
+	// TODO
 	return true;
     }
 }
