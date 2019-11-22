@@ -3,6 +3,10 @@
  */
 package dao;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import entity.Reserve;
 import entity.User;
 
 /**
@@ -10,16 +14,29 @@ import entity.User;
  *
  * @author jumborin
  */
-public class UserDao {
+public class UserDao implements DaoInterface<User> {
     /**
      * ユーザを取得する
      *
      * @return ユーザ情報
      */
-    public User select(User user) {
+    @Override
+    public User select(final User user) {
 	// TODO
 	user.setUserName("田中太郎");
 	return user;
+    }
+
+    /**
+     * ユーザ一覧を取得する
+     *
+     * @return ユーザ一覧
+     */
+    @Override
+    public List<User> getAll() {
+	// TODO
+	List<User> list = new ArrayList<User>();
+	return list;
     }
 
     /**
@@ -27,7 +44,8 @@ public class UserDao {
      *
      * @return 登録結果(true:成功、false:失敗)
      */
-    public boolean insert() {
+    @Override
+    public boolean insert(final User user) {
 	// TODO
 	return true;
     }
@@ -37,7 +55,8 @@ public class UserDao {
      *
      * @return 更新結果(true:成功、false:失敗)
      */
-    public boolean update() {
+    @Override
+    public boolean update(final User user) {
 	// TODO
 	return true;
     }
@@ -47,7 +66,8 @@ public class UserDao {
      *
      * @return 削除結果(true:成功、false:失敗)
      */
-    public boolean delete() {
+    @Override
+    public boolean delete(final User user) {
 	// TODO
 	return true;
     }
