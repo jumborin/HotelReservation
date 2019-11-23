@@ -29,6 +29,7 @@
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 		crossorigin="anonymous"></script>
 
+	<!-- ナビゲーションバー -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<a class="navbar-brand" href="TopAction">ホテル予約システム</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -39,15 +40,23 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item"><a class="nav-link disabled" href="#">予約
-				</a></li>
-				<li class="nav-item"><a class="nav-link disabled" href="#">客室紹介</a></li>
-				<li class="nav-item active"><a class="nav-link disabled"
-					href="#" aria-disabled="true">マイページ</a></li>
+				<s:form action="Menu_NewReserveAction">
+					<li class="nav-item"><s:submit class="btn btn-link" value="予約" />
+					</li>
+				</s:form>
+				<s:form action="Menu_AboutAction">
+					<li class="nav-item"><s:submit class="btn btn-link"
+							value="客室紹介" /></li>
+				</s:form>
+				<s:form action="Menu_MyPageAction">
+					<li class="nav-item active"><s:submit class="btn btn-link"
+							value="マイページ" /></li>
+				</s:form>
 			</ul>
 		</div>
 	</nav>
 
+	<!-- 画面本体 -->
 	<div class="alert alert-info" role="alert">
 		<s:property value="userName" />
 		さんの予約状況は下記の通りです。
