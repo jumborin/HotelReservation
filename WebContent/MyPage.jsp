@@ -53,14 +53,15 @@
 							value="マイページ" /></li>
 				</s:form>
 			</ul>
+			<div>
+				ログインユーザ：
+				<s:property value="userName" />
+			</div>
 		</div>
 	</nav>
 
 	<!-- 画面本体 -->
-	<div class="alert alert-info" role="alert">
-		<s:property value="userName" />
-		さんの予約状況は下記の通りです。
-	</div>
+	<div class="alert alert-info" role="alert">予約状況は下記の通りです。</div>
 
 	<s:form action="MyPageAction">
 		<table class="table">

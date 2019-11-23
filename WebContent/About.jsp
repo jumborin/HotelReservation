@@ -53,13 +53,15 @@
 							value="マイページ" /></li>
 				</s:form>
 			</ul>
+			<div>
+				ログインユーザ：
+				<s:property value="userName" />
+			</div>
 		</div>
 	</nav>
 
 	<!-- 画面本体 -->
-	<div class="alert alert-info" role="alert">
-		客室紹介画面
-	</div>
+	<div class="alert alert-info" role="alert">客室紹介画面</div>
 
 </body>
 </html>

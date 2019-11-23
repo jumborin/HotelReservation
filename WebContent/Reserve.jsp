@@ -39,11 +39,23 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link"
-					　href="ReserveAction">予約 </a></li>
-				<li class="nav-item"><a class="nav-link disabled" href="#">客室紹介</a></li>
-				<li class="nav-item"><a class="nav-link disabled" href="MyPageAction">マイページ</a></li>
+				<s:form action="Menu_NewReserveAction">
+					<li class="nav-item"><s:submit class="btn btn-link" value="予約" />
+					</li>
+				</s:form>
+				<s:form action="Menu_AboutAction">
+					<li class="nav-item"><s:submit class="btn btn-link"
+							value="客室紹介" /></li>
+				</s:form>
+				<s:form action="Menu_MyPageAction">
+					<li class="nav-item active"><s:submit class="btn btn-link"
+							value="マイページ" /></li>
+				</s:form>
 			</ul>
+			<div>
+				ログインユーザ：
+				<s:property value="userName" />
+			</div>
 		</div>
 	</nav>
 
