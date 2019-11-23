@@ -25,6 +25,18 @@
 			method="execute">
 			<result name="complete">/MyPage.jsp</result>
 		</action>
+		<action name="Menu_NewReserveAction"
+			class="action.Menu_NewReserveAction" method="execute">
+			<result name="next_page">/Reserve.jsp</result>
+		</action>
+		<action name="Menu_AboutAction"
+			class="action.Menu_AboutAction" method="execute">
+			<result name="next_page">/About.jsp</result>
+		</action>
+		<action name="Menu_MyPageAction"
+			class="action.Menu_MyPageAction" method="execute">
+			<result name="next_page">/MyPage.jsp</result>
+		</action>
 
 	</package>
 	<constant name="struts.action.extension" value="" />
