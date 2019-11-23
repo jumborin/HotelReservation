@@ -59,6 +59,8 @@
 		</div>
 	</nav>
 
+	<!-- 画面本体 -->
+	<div class="alert alert-info" role="alert">予約情報を入力してください。</div>
 	<s:form action="ReserveAction">
 		<div class="form-group">
 			<label for="startDate">日付(宿泊開始日)</label> <input type="text"
