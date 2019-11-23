@@ -16,7 +16,6 @@ import org.apache.logging.log4j.Logger;
  * 予約処理を行うアクションクラス
  *
  * @author jumborin
- *
  */
 public class ReserveAction implements Action {
 
@@ -41,6 +40,9 @@ public class ReserveAction implements Action {
     @Setter
     private String plan = "";
 
+    /**
+     * ロジック処理
+     */
     @Override
     public String execute() throws Exception {
 

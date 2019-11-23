@@ -6,8 +6,6 @@ import entity.User;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 import org.apache.logging.log4j.LogManager;
@@ -18,7 +16,6 @@ import org.apache.struts2.interceptor.SessionAware;
  * マイページの処理を行うアクションクラス
  *
  * @author jumborin
- *
  */
 public class MyPageAction implements Action, SessionAware {
 
@@ -41,6 +38,9 @@ public class MyPageAction implements Action, SessionAware {
     @Setter
     private String plan = "";
 
+    /**
+     * ロジック処理
+     */
     @Override
     public String execute() throws Exception {
 	User user = (User) session.get("user");

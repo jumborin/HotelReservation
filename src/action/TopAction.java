@@ -9,7 +9,6 @@ import lombok.Setter;
  * 本アプリケーションにアクセスする
  *
  * @author jumborin
- *
  */
 public class TopAction implements Action {
     @Getter @Setter
@@ -17,6 +16,9 @@ public class TopAction implements Action {
     @Getter @Setter
     private String password ="";
 
+    /**
+     * ロジック処理
+     */
     @Override
     public String execute() throws Exception {
 	return "ok";
