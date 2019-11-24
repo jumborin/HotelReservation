@@ -79,6 +79,7 @@ public class ReserveAction implements Action, SessionAware {
 
 	// ヘッダーに表示するユーザ名を取得
 	this.userName = user.getUserName();
+	logger.debug("{},{}", user.getUserId(), user.getUserName());
 
 	// Entityに画面項目をセット
 	Reserve reserve = new Reserve();

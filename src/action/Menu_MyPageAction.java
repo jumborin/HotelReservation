@@ -2,6 +2,8 @@ package action;
 
 import java.util.Map;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.opensymphony.xwork2.Action;
@@ -18,6 +20,7 @@ import lombok.Setter;
  */
 public class Menu_MyPageAction implements Action, SessionAware {
 
+    private Logger logger = LogManager.getLogger(Menu_MyPageAction.class);
     private Map<String, Object> session;
 
     /**
@@ -39,6 +42,7 @@ public class Menu_MyPageAction implements Action, SessionAware {
     public String execute() throws Exception {
 	User user = (User) session.get("user");
 	this.userName = user.getUserName();
+	logger.debug("{},{}", user.getUserId(), user.getUserName());
 	return "next_page";
     }
 }

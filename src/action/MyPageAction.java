@@ -58,7 +58,7 @@ public class MyPageAction implements Action, SessionAware {
 
 	// 画面遷移
 	userName = user.getUserName();
-	logger.debug("{},「{}」がマイページを開きました。", user.getUserId(), user.getUserName());
+	logger.debug("{},{}", user.getUserId(), user.getUserName());
 	return "add";
     }
 }
