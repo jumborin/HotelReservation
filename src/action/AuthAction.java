@@ -61,7 +61,7 @@ public class AuthAction implements Action, SessionAware {
 	// 結果処理
 	if (user.getUserName().equals("")) {
 	    logger.error("「{}」がログインできませんでした。", userId);
-	    return "error";
+	    return "loginError";
 	} else {
 	    logger.info("「{}」がログインしました。", userId);
 	    session.put("user", user);

@@ -13,7 +13,7 @@
 		<action name="AuthAction" class="action.AuthAction"
 			method="execute">
 			<result name="found">/MyPage.jsp</result>
-			<result name="error">/error.jsp</result>
+			<result name="loginError">/Login.jsp</result>
 		</action>
 		<action name="MyPageAction" class="action.MyPageAction"
 			method="execute">
