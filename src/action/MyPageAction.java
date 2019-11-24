@@ -43,22 +43,26 @@ public class MyPageAction implements Action, SessionAware {
     @Override
     public String execute() throws Exception {
 
-	// ログイン状況のチェック
+	// セッションからヘッダーのユーザ名を設定
 	User user = (User) session.get("user");
+
+	// ログインしてなかった時にログイン画面に遷移
 	if (user == null) {
 	    logger.error("ログインしていません");
 	    return "loginError";
 	}
 
-	// ログイン状況のチェック
+	// ログインしてなかった時にログイン画面に遷移
 	if (user.getUserName() == null) {
 	    logger.error("ログインしていません");
 	    return "loginError";
 	}
 
-	// 画面遷移
-	userName = user.getUserName();
+	// ヘッダーに表示するユーザ名を取得
+	this.userName = user.getUserName();
 	logger.debug("{},{}", user.getUserId(), user.getUserName());
+
+	// 画面遷移
 	return "add";
     }
 }

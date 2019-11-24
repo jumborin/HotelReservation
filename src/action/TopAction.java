@@ -23,6 +23,8 @@ public class TopAction implements Action {
      */
     @Override
     public String execute() throws Exception {
+
+	// 画面遷移
 	return "ok";
     }
 }

@@ -99,6 +99,8 @@ public class ReserveAction implements Action, SessionAware {
 	} else {
 	    logger.info("「{}」プランは予約できませんでした。", plan);
 	}
+
+	// 画面遷移
 	return "complete";
     }
 }

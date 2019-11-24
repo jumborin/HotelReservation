@@ -40,9 +40,27 @@ public class Menu_NewReserveAction implements Action, SessionAware {
      */
     @Override
     public String execute() throws Exception {
+
+	// セッションからヘッダーのユーザ名を設定
 	User user = (User) session.get("user");
+
+	// ログインしてなかった時にログイン画面に遷移
+	if (user == null) {
+	    logger.error("ログインされていない状態で起動されました");
+	    return "loginError";
+	}
+
+	// ログインしてなかった時にログイン画面に遷移
+	if (user.getUserName() == null) {
+	    logger.error("ログインされていない状態で起動されました");
+	    return "loginError";
+	}
+
+	// ヘッダーに表示するユーザ名を取得
 	this.userName = user.getUserName();
 	logger.debug("{},{}", user.getUserId(), user.getUserName());
+
+	// 画面遷移
 	return "next_page";
     }
 }
