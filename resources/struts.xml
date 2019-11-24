@@ -20,6 +20,7 @@
 			<result name="add">/Reserve.jsp</result>
 			<result name="cancel">/ReserveResult.jsp</result>
 			<result name="delete">/ReserveResult.jsp</result>
+			<result name="loginError">/Login.jsp</result>
 		</action>
 		<action name="ReserveAction" class="action.ReserveAction"
 			method="execute">

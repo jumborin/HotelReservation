@@ -43,11 +43,23 @@ public class MyPageAction implements Action, SessionAware {
      */
     @Override
     public String execute() throws Exception {
+
+	// ログイン状況のチェック
 	User user = (User) session.get("user");
-	userName = user.getUserName();
-	if (user.getUserId() != null) {
-	    logger.info("入力されたパラメータは「{}」です。", user.getUserId());
+	if (user == null) {
+	    logger.error("ログインしていません");
+	    return "loginError";
 	}
+
+	// ログイン状況のチェック
+	if (user.getUserName() == null) {
+	    logger.error("ログインしていません");
+	    return "loginError";
+	}
+
+	// 画面遷移
+	userName = user.getUserName();
+	logger.info("入力されたパラメータは「{}」です。", user.getUserId());
 	return "add";
     }
 }
