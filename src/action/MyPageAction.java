@@ -30,13 +30,12 @@ public class MyPageAction implements Action, SessionAware {
 	this.session = session;
     }
 
+    // ヘッダ表示項目
     @Getter
     @Setter
     private String userName = "";
 
-    @Getter
-    @Setter
-    private String plan = "";
+    // 画面入出力項目
 
     /**
      * ロジック処理
@@ -59,7 +58,7 @@ public class MyPageAction implements Action, SessionAware {
 
 	// 画面遷移
 	userName = user.getUserName();
-	logger.info("入力されたパラメータは「{}」です。", user.getUserId());
+	logger.debug("{},「{}」がマイページを開きました。", user.getUserId(), user.getUserName());
 	return "add";
     }
 }
