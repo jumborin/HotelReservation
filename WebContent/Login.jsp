@@ -31,6 +31,7 @@
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 		crossorigin="anonymous"></script>
 
+	<!-- ナビゲーションバー -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<a class="navbar-brand" href="TopAction">ホテル予約システム</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -50,6 +51,7 @@
 		</div>
 	</nav>
 
+	<!-- 画面本体 -->
 	<s:form action="AuthAction">
 		<div class="form-group">
 			<label for="uid">ユーザID：</label> <input type="text" id="uid"

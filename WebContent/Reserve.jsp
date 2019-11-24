@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta charset="utf-8">
+
 <!-- Bootstrap用 -->
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -29,6 +30,7 @@
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 		crossorigin="anonymous"></script>
 
+	<!-- ナビゲーションバー -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<a class="navbar-brand" href="TopAction">ホテル予約システム</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
