@@ -25,6 +25,7 @@
 		<action name="ReserveAction" class="action.ReserveAction"
 			method="execute">
 			<result name="complete">/MyPage.jsp</result>
+			<result name="loginError">/Login.jsp</result>
 		</action>
 		<action name="Menu_NewReserveAction"
 			class="action.Menu_NewReserveAction" method="execute">

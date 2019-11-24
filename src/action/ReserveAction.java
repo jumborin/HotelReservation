@@ -22,6 +22,7 @@ import org.apache.struts2.interceptor.SessionAware;
  */
 public class ReserveAction implements Action, SessionAware {
 
+    private Logger logger = LogManager.getLogger(ReserveAction.class);
     private Map<String, Object> session;
 
     /**
@@ -32,12 +33,12 @@ public class ReserveAction implements Action, SessionAware {
 	this.session = session;
     }
 
+    // ヘッダ表示項目
     @Getter
     @Setter
     private String userName = "";
 
-    private Logger logger = LogManager.getLogger(ReserveAction.class);
-
+    // 画面入出力項目
     @Getter
     @Setter
     private String userId = "";
@@ -65,15 +66,27 @@ public class ReserveAction implements Action, SessionAware {
 
 	// セッションからヘッダーのユーザ名を設定
 	User user = (User) session.get("user");
+
+	// ログインしてなかった時にログイン画面に遷移
+	if (user == null) {
+	    logger.error("ログインされていない状態で起動されました");
+	    return "loginError";
+	}
+	if (user.getUserName() == null) {
+	    logger.error("ログインされていない状態で起動されました");
+	    return "loginError";
+	}
+
+	// ヘッダーに表示するユーザ名を取得
 	this.userName = user.getUserName();
 
 	// Entityに画面項目をセット
 	Reserve reserve = new Reserve();
-	reserve.setReserveId(reserveId);
-	reserve.setStartDate(startDate);
-	reserve.setEndDate(endDate);
-	reserve.setNumber(number);
-	reserve.setPlan(plan);
+	reserve.setReserveId(this.reserveId);
+	reserve.setStartDate(this.startDate);
+	reserve.setEndDate(this.endDate);
+	reserve.setNumber(this.number);
+	reserve.setPlan(this.plan);
 
 	// ロジック処理
 	ReserveDao reserveDao = new ReserveDao();
