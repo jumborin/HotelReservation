@@ -11,10 +11,12 @@ import lombok.Setter;
  * @author jumborin
  */
 public class TopAction implements Action {
-    @Getter @Setter
-    private String userId ="";
-    @Getter @Setter
-    private String password ="";
+    @Getter
+    @Setter
+    private String userId = "";
+    @Getter
+    @Setter
+    private String password = "";
 
     /**
      * ロジック処理
